@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASCII Code Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <h1>ASCII CODE EXPLORER</h1>
+
+        <p class="subtitle">
+            Press any key or enter a character
+        </p>
+
+        <!-- SEARCH BAR -->
+        <div class="search-box">
+
+            <input type="text" id="searchInput" placeholder="Search or press any key..." maxlength="1"
+                autocomplete="off">
+
+            <button onclick="clearInput()">×</button>
+
+        </div>
+
+
+        <!-- OUTPUT -->
+        <div class="output-box" id="outputBox">
+
+            <div class="output-row">
+                <span>Character</span>
+                <strong id="character">—</strong>
+            </div>
+
+            <div class="output-row">
+                <span>Decimal</span>
+                <strong id="decimal">—</strong>
+            </div>
+
+            <div class="output-row">
+                <span>Binary</span>
+                <strong id="binary">—</strong>
+            </div>
+
+            <div class="output-row">
+                <span>Octal</span>
+                <strong id="octal">—</strong>
+            </div>
+
+            <div class="output-row">
+                <span>Hexadecimal</span>
+                <strong id="hexadecimal">—</strong>
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE FOR NON ASCII KEYS -->
+        <div class="message" id="message"></div>
+
+
+        <div class="hint">
+            Example: A → 65 → 01000001 → 101 → 41
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

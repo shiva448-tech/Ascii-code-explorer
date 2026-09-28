@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Only animated background */
+
+.background {
+    position: fixed;
+    inset: 0;
+background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 45),
+            rgba(0, 0, 0, 45)
+        ),
+        url(https://i.pinimg.com/736x/21/8b/51/218b512f1ef965c9a7fdf3e483eea610.jpg);
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+}
+
+/* Main content */
+
+.container {
+    width: 90%;
+    max-width: 600px;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+/* SEARCH BAR */
+
+.search-box {
+    width: 100%;
+
+    display: flex;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(8px);
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 18px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+.search-box input::placeholder {
+    color: #bbbbbb;
+}
+
+.search-box button {
+    width: 55px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* OUTPUT BAR */
+
+.output-box {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    text-align: left;
+}
+
+.output-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px 5px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.output-row:last-child {
+    border-bottom: none;
+}
+
+.output-row span {
+    color: #bbbbbb;
+}
+
+.output-row strong {
+    color: white;
+
+    font-family: monospace;
+
+    font-size: 16px;
+}
+
+
+/* ERROR MESSAGE */
+
+.message {
+    margin-top: 15px;
+
+    color: #ff8080;
+
+    font-size: 14px;
+}
+
+
+/* SMALL EXAMPLE */
+
+.hint {
+    margin-top: 20px;
+
+    color: #aaaaaa;
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .search-box input {
+        font-size: 16px;
+    }
+
+    .output-row {
+        font-size: 14px;
+    }
+}
